@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness Tracker</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+<body class="bg-gray-100">
+
+    <!-- Top Navigation Bar -->
+    <nav class="bg-blue-900 text-white p-4 flex justify-between items-center">
+        <h2 class="text-2xl font-bold"> <i class="fas fa-dumbbell mr-2"></i>FitTrack
+        </h2>
+        <ul class="flex space-x-6">
+            <li><a href="#" class="text-blue-300 hover:text-white">Dashboard</a></li>
+            <li><a href="#logWorkout" class="text-blue-300 hover:text-white">Log Workout</a></li>
+            <li><a href="#updateRoutine" class="text-blue-300 hover:text-white">Update Routine</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="p-6">
+        <h1 class="text-3xl font-bold">Dashboard</h1>
+
+        <!-- Stats Section -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-4">
+            <div class="bg-white p-4 rounded shadow">
+                <h3 class="text-xl">Total Calories Burned</h3>
+                <p class="text-2xl font-bold" id="calories">0 cal</p>
+            </div>
+            <div class="bg-white p-4 rounded shadow">
+                <h3 class="text-xl">Total Time Spent</h3>
+                <p class="text-2xl font-bold" id="timeSpent">0 min</p>
+            </div>
+            <div class="bg-white p-4 rounded shadow">
+                <h3 class="text-xl">Total Steps Taken</h3>
+                <p class="text-2xl font-bold" id="steps">0</p>
+            </div>
+        </div>
+
+        <!-- Chart Section -->
+        <div class="mt-6 bg-white p-4 rounded shadow">
+            <h3 class="text-xl font-bold">Workout Progress</h3>
+            <canvas id="workoutChart"></canvas>
+        </div>
+
+        <!-- Workout Logging Form -->
+        <div id="logWorkout" class="p-6 bg-white mt-6 rounded shadow">
+            <h3 class="text-xl font-bold">Log Workout</h3>
+            <input type="text" id="exercise" placeholder="Exercise Name" class="border p-2 w-full mb-2">
+            <input type="number" id="duration" placeholder="Duration (min)" class="border p-2 w-full mb-2">
+            <input type="number" id="caloriesBurned" placeholder="Calories Burned" class="border p-2 w-full mb-2">
+            <button onclick="logWorkout()" class="navy-button">Log Workout</button>
+        </div>
+
+        <!-- Workout List -->
+        <ul id="workout-list" class="mt-4"></ul>
+
+        <!-- Update Routine Section -->
+        <div id="updateRoutine" class="p-6 bg-white mt-6 rounded shadow">
+            <h3 class="text-xl font-bold">Update Routine</h3>
+            <input type="text" id="routineExercise" placeholder="Exercise Name" class="border p-2 w-full mb-2">
+            <input type="number" id="routineReps" placeholder="Reps" class="border p-2 w-full mb-2">
+            <input type="number" id="routineSets" placeholder="Sets" class="border p-2 w-full mb-2">
+            <button onclick="updateRoutine()" class="navy-button">Update Routine</button>
+</div>
+
+<!-- Routine List -->
+<ul id="routine-list" class="mt-4"></ul>
+
+    </main>
+
+    <script src="app.js"></script>
+
+</body>
+</html>

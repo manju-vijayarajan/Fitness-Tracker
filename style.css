@@ -1,0 +1,220 @@
+/* General Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-image: url('image1.jpeg'); /* Change this to your background image */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #333;
+}
+
+/* Top Navigation Bar */
+nav {
+    background: rgb(18, 6, 70) !important; 
+    padding: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+
+nav h2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #dbeafe;
+}
+
+/* Main Content */
+main {
+    max-width: 900px;
+    margin: 40px auto;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Stats Section */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.grid div {
+    background: white;
+    padding: 16px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Chart */
+.chart-container {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+/* Workout Log Form */
+#logWorkout {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+input {
+    border: 2px solid #d1d5db;
+    padding: 10px;
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+button {
+    background: #7c93c1;
+    color: white;
+    font-weight: bold;
+    padding: 12px;
+    width: 100%;
+    border-radius: 8px;
+    transition: background 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background: #929ec7;
+    transform: translateY(-2px);
+}
+
+/* Workout List */
+#workout-list li {
+    background: white;
+    padding: 12px;
+    margin: 8px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#workout-list li button {
+    background: #4e8faf;
+    padding: 8px 12px;
+    border-radius: 6px;
+    transition: background 0.3s;
+}
+
+#workout-list li button:hover {
+    background: #9cb1c1;
+}
+
+/* Update Routine Section */
+#updateRoutine {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+#updateRoutine input {
+    border: 2px solid #d1d5db;
+    padding: 10px;
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+#updateRoutine button {
+    background: #2563eb;
+    color: white;
+    font-weight: bold;
+    padding: 12px;
+    width: 100%;
+    border-radius: 8px;
+    transition: background 0.3s, transform 0.2s;
+}
+
+#updateRoutine button:hover {
+    background: #1e40af;
+    transform: translateY(-2px);
+}
+
+/* Routine List */
+#routine-list li {
+    background: white;
+    padding: 12px;
+    margin: 8px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#routine-list li button {
+    background: #ef4444;
+    padding: 8px 12px;
+    border-radius: 6px;
+    transition: background 0.3s;
+}
+
+#routine-list li button:hover {
+    background: #dc2626;
+}
+
+.navy-button {
+    background-color: rgb(18, 6, 70) !important; /* Navy Blue */
+    color: white !important;
+    padding: 10px;
+    width: 100%;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px; /* Optional: Adds rounded corners */
+    font-size: 16px; /* Optional: Makes text slightly bigger */
+}
+
+.navy-button:hover {
+    background-color: rgb(18, 6, 70); /* Darker navy on hover */
+}
+
+.small-delete-button {
+    font-size: 12px;   /* Reduce text size */
+    padding: 2px 6px;  /* Less padding = smaller height */
+    line-height: 1;    /* Reduce line height */
+    height: 20px;      /* Explicitly set height */
+    border-radius: 4px;
+    background-color: #505a87;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.small-delete-button:hover {
+    background-color: #b91c1c;
+}
